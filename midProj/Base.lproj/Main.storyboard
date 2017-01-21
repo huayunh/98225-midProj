@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="midProj" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3w-OC-buD" customClass="ControlledCircleView" customModule="midProj" customModuleProvider="target">
+                                <rect key="frame" x="100" y="100" width="400" height="400"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Abq-i8-ETO"/>
+                                    <constraint firstAttribute="width" constant="400" id="OCN-k6-7n8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4e-5z-Kcq" customClass="SpinningCircleView" customModule="midProj" customModuleProvider="target">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="cFJ-dv-LVU"/>
+                                    <constraint firstAttribute="height" constant="300" id="yY7-6a-qQt"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8R-6l-4mI">
+                                <rect key="frame" x="233" y="221" width="134" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="812-8d-mNa"/>
+                                    <constraint firstAttribute="width" constant="134" id="rHW-gg-rfm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapInsidePauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pPf-L8-Tbw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dL-Oa-6dt">
+                                <rect key="frame" x="209.5" y="57" width="181" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="H9F-ZY-fj3"/>
+                                    <constraint firstAttribute="height" constant="90" id="wLP-Se-iX8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1la-NX-AnE">
+                                <rect key="frame" x="276" y="47" width="48" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="H0Z-pB-zC1"/>
+                                    <constraint firstAttribute="height" constant="21" id="ydR-3e-pRq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.28530891879999998" green="0.67359775639999997" blue="0.55239559829999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.28530891879999998" green="0.67359775639999997" blue="0.55239559829999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9dL-Oa-6dt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6V0-8c-zrF"/>
+                            <constraint firstItem="1la-NX-AnE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ui-Vh-ihS"/>
+                            <constraint firstItem="9dL-Oa-6dt" firstAttribute="top" secondItem="1la-NX-AnE" secondAttribute="bottom" constant="-11" id="8x9-Ok-Enx"/>
+                            <constraint firstItem="H4e-5z-Kcq" firstAttribute="top" secondItem="9dL-Oa-6dt" secondAttribute="bottom" constant="3" id="Cn9-KB-Ggh"/>
+                            <constraint firstItem="L8R-6l-4mI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cq8-kP-iwt"/>
+                            <constraint firstItem="y3w-OC-buD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DHl-9e-K3w"/>
+                            <constraint firstItem="H4e-5z-Kcq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hp1-Y6-8ET"/>
+                            <constraint firstItem="y3w-OC-buD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KaU-YB-139"/>
+                            <constraint firstItem="H4e-5z-Kcq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ksd-Jm-oFT"/>
+                            <constraint firstItem="L8R-6l-4mI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tpd-9y-R5X"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="controlledCircle" destination="y3w-OC-buD" id="mwW-BW-O0v"/>
+                        <outlet property="pauseButton" destination="L8R-6l-4mI" id="yi8-Ek-eNp"/>
+                        <outlet property="scoreLabel" destination="9dL-Oa-6dt" id="CHp-9f-6Oz"/>
+                        <outlet property="spinningCircle" destination="H4e-5z-Kcq" id="Ewv-yO-jqs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="114"/>
+        </scene>
+    </scenes>
+</document>
